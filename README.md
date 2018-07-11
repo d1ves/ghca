@@ -7,7 +7,7 @@
  Source Code Method From:[007xiaoxingxing/GhcaDialer](https://github.com/007xiaoxingxing/GhcaDialer )
 
 ## Usage
-
+命令行下：php GHCA.PHP 宽带用户名 宽带密码
 Paramaters Accept: `$Account`and`$Password`
 
 Return:
