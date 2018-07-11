@@ -2,7 +2,7 @@
 
 ## What's this
 
- `China Telecom 189 fei young` encrypted account caculator
+ `电信飞young3.09` encrypted account caculator
 
  Source Code Method From:[007xiaoxingxing/GhcaDialer](https://github.com/007xiaoxingxing/GhcaDialer )
 
