@@ -1,11 +1,8 @@
 <?php
 
 /* 电信天翼飞Young 3.09 相关算号算法 */
-namespace ghca;
 
-class Ghca
-{
-    public static function encrypt($account,$password)
+	function encrypt($account,$password)
     {
         $account=strtoupper($account);
         $key = 'aI0fC8RslXg6HXaKAUa6kpvcAXszvTcxYP8jmS9sBnVfIqTRdJS1eZNHmBjKN28j';
@@ -37,13 +34,13 @@ class Ghca
 
 
         $md5_str = $time_byte_one.$time_byte_two.$time_byte_thr.$time_byte_for.$split_key_one.$split_password_one.$account.$split_key_two.$split_password_two;
+
         //MD5 原始二进制流 注意 “true” 参数
         $md5_once = md5($md5_str,true);
         $md5_twice = md5($md5_once);
         $md5_final = substr($md5_twice,0,16);
 
         $encrypt_account = '~ghca'.strtoupper($time_hex.'2023'.$md5_final.$account_last_four.$account);
-
         $array = array(
             'data'=>array(
                 'type'=>'ghca',
@@ -55,6 +52,11 @@ class Ghca
                 )
             )
         );
-        return $array;
+        print_r($array);
     }
+if ($argc != 3) {
+	echo "参数错误，使用方法：php GHCA.PHP 宽带用户名 宽带密码\n";
+	exit;
 }
+encrypt($argv[1],$argv[2]);
+?>
